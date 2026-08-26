@@ -193,7 +193,7 @@ tailwind.config = {
       <a href="#ask" class="inline-flex min-h-[44px] items-center text-[15px] text-body transition hover:text-ink">Questions to Ask</a>
       <a href="#faq" class="inline-flex min-h-[44px] items-center text-[15px] text-body transition hover:text-ink">FAQ</a>
     </nav>
-    <a href="#talk" class="btn btn-ink hidden lg:inline-flex">Talk to a counsellor</a>
+    <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-ink hidden lg:inline-flex">Schedule Free Consultation</a>
     <button id="navToggle" class="grid h-11 w-11 place-items-center rounded-btn bg-white lg:hidden" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F400F" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
@@ -204,7 +204,7 @@ tailwind.config = {
       <a href="#ready" class="inline-flex min-h-[44px] items-center text-[15px] text-body">What to Bring</a>
       <a href="#ask" class="inline-flex min-h-[44px] items-center text-[15px] text-body">Questions to Ask</a>
       <a href="#faq" class="inline-flex min-h-[44px] items-center text-[15px] text-body">FAQ</a>
-      <a href="#talk" class="btn btn-ink mt-3 self-start">Talk to a counsellor</a>
+      <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-ink mt-3 self-start">Schedule Free Consultation</a>
     </div>
   </div>
 </header>
@@ -228,7 +228,7 @@ tailwind.config = {
           One program, one point of contact. A structured path through USMLE Step 1, Step 2 CK and Step 3, ECFMG, US clinical experience (USCE), and the ERAS residency application — with one-on-one mentoring from a US physician at the two stages that matter most: exam strategy and ERAS strategy.
         </p>
         <div class="rise-in mt-8 flex flex-wrap gap-3" style="animation-delay:.28s">
-          <a href="#talk" class="btn btn-cta">Talk to a counsellor</a>
+          <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-cta">Schedule Free Consultation</a>
           <a href="#stages" class="btn btn-ghost">See the four stages</a>
         </div>
         <div class="rise-in mt-8 flex flex-wrap gap-2" style="animation-delay:.34s">
@@ -249,63 +249,29 @@ tailwind.config = {
 
 <section id="talk" class="py-12 lg:py-16">
   <div class="container">
-    <div class="grid gap-12 lg:grid-cols-[.9fr_1.1fr] lg:gap-16">
+    <div class="grid gap-12 lg:grid-cols-[1fr_.9fr] lg:gap-16">
       <div data-reveal>
         <h2 class="display t-h2">Talk to a counsellor</h2>
         <p class="copy mt-5">Tell us where you are in the USMLE process. A counsellor calls back with what the program covers from your stage onward.</p>
-        <p class="copy mt-5">We reply within one working day.</p>
-        <div class="card mt-8 p-6">
-          <p class="t-h3">Two more things and we can be specific</p>
-          <p class="copy mt-2 text-[15px]">Optional, but it helps us tell you exactly where the program picks up for you.</p>
+        <p class="copy mt-4">Whether you&rsquo;re still in MBBS, preparing for Step 1, or already ECFMG certified and applying for residency — the consultation starts from where you actually are.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-cta">Schedule Free Consultation</a>
+          <a href="https://wa.me/918041743956?text=I%27d%20like%20to%20know%20more%20about%20the%20USA%20Standard%20Consulting%20Program%20for%20USMLE%20and%20residency%20Match." target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Message us on WhatsApp</a>
         </div>
+        <p class="copy mt-5 text-[15px]">We reply within one working day.</p>
       </div>
 
-      <!-- No backend here, so the form composes a WhatsApp message from what
-           you enter rather than pretending to submit somewhere. -->
-      <form id="leadForm" data-reveal class="card p-7 lg:p-9" novalidate>
-        <div class="grid gap-5 sm:grid-cols-2">
-          <div class="sm:col-span-2">
-            <label class="lbl" for="f-name">Full name</label>
-            <input class="field" id="f-name" name="name" type="text" autocomplete="name" required />
-          </div>
-          <div>
-            <label class="lbl" for="f-wa">WhatsApp number</label>
-            <input class="field" id="f-wa" name="whatsapp" type="tel" autocomplete="tel" required />
-          </div>
-          <div>
-            <label class="lbl" for="f-email">Email</label>
-            <input class="field" id="f-email" name="email" type="email" autocomplete="email" required />
-          </div>
-          <div class="sm:col-span-2">
-            <label class="lbl" for="f-stage">Where you are right now</label>
-            <select class="field" id="f-stage" name="stage" required>
-              <option value="">Select your current stage</option>
-              <option>Still in MBBS</option>
-              <option>MBBS graduate, yet to start USMLE</option>
-              <option>Preparing for Step 1</option>
-              <option>Cleared Step 1, preparing Step 2 CK</option>
-              <option>Cleared Step 2 CK</option>
-              <option>ECFMG certified, applying for residency</option>
-            </select>
-          </div>
-          <div class="sm:col-span-2">
-            <label class="lbl" for="f-college">MBBS college and year of graduation <span class="font-normal text-body">(optional)</span></label>
-            <input class="field" id="f-college" name="college" type="text" />
-          </div>
-          <div class="sm:col-span-2">
-            <label class="lbl" for="f-city">Your city <span class="font-normal text-body">(optional)</span></label>
-            <input class="field" id="f-city" name="city" type="text" autocomplete="address-level2" />
-          </div>
-        </div>
-
-        <label class="mt-6 flex cursor-pointer items-start gap-3">
-          <input type="checkbox" id="f-consent" required class="mt-1 h-5 w-5 shrink-0 rounded border-line text-ink focus:ring-2 focus:ring-ink" />
-          <span class="text-[14px] leading-relaxed text-body">I agree to be contacted by GooCampus on WhatsApp, phone and email about this program.</span>
-        </label>
-
-        <button type="submit" class="btn btn-ink mt-7 w-full sm:w-auto">Get a call back</button>
-        <p id="formNote" class="copy mt-4 text-[14px]" role="status" aria-live="polite">We reply within one working day.</p>
-      </form>
+      <div data-reveal class="card p-7 lg:p-8">
+        <p class="t-h3 display">What the counsellor will ask</p>
+        <p class="copy mt-3 text-[15px]">So the call is specific rather than generic, it helps to have these to hand.</p>
+        <ul class="mt-6 divide-y divide-line">
+          <li class="py-3 text-[15px] text-body">Where you are right now — MBBS, graduate, or partway through the Steps</li>
+          <li class="py-3 text-[15px] text-body">Which USMLE exams you&rsquo;ve cleared, and when</li>
+          <li class="py-3 text-[15px] text-body">Your MBBS college and year of graduation</li>
+          <li class="py-3 text-[15px] text-body">Whether you already have any US clinical experience</li>
+          <li class="py-3 text-[15px] text-body">The city you&rsquo;re based in</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -384,7 +350,7 @@ tailwind.config = {
         <p class="text-[13px] font-medium uppercase tracking-[.14em] text-ink">Get these ready</p>
         <h2 class="display t-h2 mt-5">We&rsquo;ll handle the rest.</h2>
         <p class="copy mt-6">Don&rsquo;t have all of these yet? Still send the form — setting them up is part of the program.</p>
-        <a href="#talk" class="btn btn-cta mt-8">Talk to a counsellor</a>
+        <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-cta mt-8">Schedule Free Consultation</a>
       </div>
       <ul data-reveal class="card divide-y divide-line p-7 lg:p-9">
         <li class="flex items-start gap-3.5 py-3.5 first:pt-0"><span class="mt-1.5 grid h-4 w-4 shrink-0 place-items-center rounded-full bg-ink text-white"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span><span class="text-[15px] leading-snug text-ink">Updated CV</span></li>
@@ -426,7 +392,7 @@ tailwind.config = {
     </div>
 
     <div data-reveal class="mt-10">
-      <a href="#talk" class="btn btn-cta">Talk to a counsellor</a>
+      <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-cta">Schedule Free Consultation</a>
     </div>
   </div>
 </section>
@@ -473,7 +439,7 @@ tailwind.config = {
       <h2 class="display t-h2 mx-auto max-w-[24ch]">Tell us where you are. We&rsquo;ll tell you what&rsquo;s next.</h2>
       <p class="copy mx-auto mt-6 max-w-[54ch]">Your current USMLE stage is all we need to map out what the program covers for you, from here to Match day.</p>
       <div class="mt-9 flex flex-wrap justify-center gap-3">
-        <a href="#talk" class="btn btn-ink">Get a call back</a>
+        <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="btn btn-ink">Schedule Free Consultation</a>
         <a href="https://wa.me/918041743956" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1112 20zm4.4-5.9c-.2-.1-1.4-.7-1.7-.8s-.4-.1-.5.1-.6.8-.7 1-.3.2-.5.1a6.5 6.5 0 01-1.9-1.2 7.3 7.3 0 01-1.4-1.7c-.1-.2 0-.4.1-.5l.4-.4.2-.4v-.4c0-.1-.5-1.3-.7-1.7s-.4-.4-.5-.4h-.4a.9.9 0 00-.6.3 2.6 2.6 0 00-.8 1.9A4.5 4.5 0 009 12a10.2 10.2 0 003.9 3.4 9.6 9.6 0 001.3.5 3.1 3.1 0 001.4.1 2.4 2.4 0 001.5-1.1 1.9 1.9 0 00.1-1.1c0-.1-.2-.2-.4-.3z"/></svg>
           Message us on WhatsApp
@@ -507,7 +473,7 @@ tailwind.config = {
       </div>
     </div>
     <div class="rule mt-12 flex flex-wrap items-center gap-x-6 gap-y-3 pt-7">
-      <a href="#talk" class="inline-flex min-h-[44px] items-center text-[15px] font-medium text-ink hover:text-ink">Talk to a counsellor</a>
+      <a href="https://goocampus.fillout.com/goocampus-free-consultation" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center text-[15px] font-medium text-ink hover:text-accent">Schedule Free Consultation</a>
       <a href="https://wa.me/918041743956" target="_blank" rel="noopener noreferrer" class="inline-flex min-h-[44px] items-center text-[15px] font-medium text-ink hover:text-ink">WhatsApp</a>
     </div>
   </div>
@@ -523,31 +489,6 @@ tailwind.config = {
     m.classList.add('hidden'); t.setAttribute('aria-expanded', 'false');
   }));
 
-  // There is no backend behind this page, so rather than a form that silently
-  // goes nowhere, submitting hands the entered details to WhatsApp.
-  const form = document.getElementById('leadForm');
-  const note = document.getElementById('formNote');
-  form && form.addEventListener('submit', e => {
-    e.preventDefault();
-    const v = id => (document.getElementById(id).value || '').trim();
-    if (!v('f-name') || !v('f-wa') || !v('f-email') || !v('f-stage') || !document.getElementById('f-consent').checked) {
-      note.textContent = 'Please fill in your name, WhatsApp number, email and current stage, and tick the consent box.';
-      note.style.color = '#A3341F';
-      return;
-    }
-    const lines = [
-      'USA Standard Consulting Program — call back request',
-      'Name: ' + v('f-name'),
-      'WhatsApp: ' + v('f-wa'),
-      'Email: ' + v('f-email'),
-      'Current stage: ' + v('f-stage')
-    ];
-    if (v('f-college')) lines.push('College / graduation year: ' + v('f-college'));
-    if (v('f-city'))    lines.push('City: ' + v('f-city'));
-    note.style.color = '';
-    note.textContent = 'Got it. A counsellor will message you on WhatsApp.';
-    window.open('https://wa.me/918041743956?text=' + encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
-  });
 
   // Nav signals scroll through shadow and surface, not height — animating
   // height would force layout every frame for no visual gain.
