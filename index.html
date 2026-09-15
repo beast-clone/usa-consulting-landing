@@ -184,10 +184,14 @@ tailwind.config = {
   .linkcard:hover .arrow { transform:translateX(5px); }
 
   /* Which section you are in, shown in the nav. */
-  #nav nav a { position:relative; }
-  #nav nav a.active { color:#3C3B6E; }
-  #nav nav a.active::after { content:""; position:absolute; left:0; right:0; bottom:11px;
-    height:2px; background:#B22234; }
+  /* The active-section marker is a real underline on the text, not a bar
+     positioned inside the link box. An absolutely-positioned bar has to be
+     offset from the box edge, which silently becomes a strikethrough if the
+     box height ever changes; text-decoration tracks the text itself and
+     cannot. */
+  #nav nav a.active { color:#3C3B6E; text-decoration:underline; text-decoration-color:#B22234;
+    text-decoration-thickness:2px; text-underline-offset:7px;
+    text-decoration-skip-ink:none; }
 
   .photo-wrap { position:relative; overflow:hidden; border-radius:16px; background:#E7E8F0; }
   .photo-wrap::before { content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
